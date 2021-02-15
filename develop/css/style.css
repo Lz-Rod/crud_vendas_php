@@ -11,6 +11,52 @@ div#container{
     box-shadow: 0px 0px 10px #777;
 }
 
+h1{
+    margin: 0px;
+}
+
+h2{
+    margin: 5px 0px 5px 0px;
+}
+
+h3{
+    margin: 5px 0px 5px 0px;
+}
+
+.linha{
+    display: flex;
+    flex-flow: row wrap;
+    }
+
+.coluna-50-l{
+    width: 50%;
+}
+
+.coluna-50-r{
+    width: 50%;
+    text-align: right;
+}
+button{
+    margin: 5px;
+}
+
+footer{
+    text-align: center;
+    font-size: 11px;
+}
+
+form#busca {
+    text-align: right;
+    margin: 5px;
+}
+
+/*icons*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/*Tabela listagem de vendedores*/
 table.listagem {
     width: 100%;
     text-align: left;
@@ -22,7 +68,8 @@ table.listagem tr{
 }
 
 table.listagem td {
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
+    padding-left: 10px;
 }
 
 table.listagem tr:nth-child(even) {
@@ -33,6 +80,46 @@ table.listagem td:nth-child(1) {
     width: 50px;
 }
 
+table.listagem td:nth-child(2) {
+    width: 350px;
+}
+
 table.listagem td:nth-child(4) {
-    width: 120px;
+    width: 100px;
+}
+
+table.listagem th {
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    padding-left: 10px;
+}
+
+/*tabela listagem de vendas*/
+table.vendas {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.vendas tr{
+    height: 35px;
+}
+
+table.vendas td {
+    border: 1px solid #ddd;
+    padding-left: 10px;
+}
+
+table.vendas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.vendas td:nth-child(4) {
+    width: 100px;
+}
+
+table.vendas th {
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    padding-left: 10px;
 }

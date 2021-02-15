@@ -29,7 +29,6 @@ modify data_venda date not null*/
 (2, 'Maria Ferreira', 'mariaferreira@gmail.com'), 
 (3, 'Stefanie Mendes', 'stefanie25@gmail.com');*/
 
-
 /*insert into vendas (id_vendedor, valor_venda, data_venda) values
 (1, '750.00', now()),
 (2, '1000.00', now()),
@@ -39,6 +38,6 @@ modify data_venda date not null*/
 
 -- select * from vendas
 
-select vendedores.id, vendedores.nome, vendedores.email, vendas.comissao, vendas.valor_venda, vendas.data_venda from vendas join vendedores
-where id_vendedor='3' and id='3';
+/*select vendedores.id, vendedores.nome, vendedores.email, vendas.comissao, vendas.valor_venda, vendas.data_venda from vendas join vendedores
+where id_vendedor='3' and id='3';*/
 
