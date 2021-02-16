@@ -32,12 +32,9 @@ modify data_venda date not null*/
 (3, 'Stefanie Mendes', 'stefanie25@gmail.com');*/
 
 /*insert into vendas (id_vendedor, valor_venda, data_venda) values
-(1, '750.00', "2021-02-14"),
-(2, '1000.00', "2021-02-14"),
-(3, '3000.00', "2021-02-14"),
-(1, '750.00', "2021-02-15"),
-(2, '1000.00', "2021-02-15"),
-(3, '3000.00', "2021-02-15");*/
+(3, '25.00', "2021-02-13"),
+(3, '25.00', "2021-02-13"),
+(4, '50.00', "2021-02-13");*/
 
 -- select * from vendedores
 
@@ -48,4 +45,4 @@ where id_vendedor='1' and id='1';*/
 
 /*delete from vendedores where id='7'*/
 
-select valor_venda from vendas where data_venda="2021-02-14"
+select sum(valor_venda) from vendas where data_venda="2021-02-16"
