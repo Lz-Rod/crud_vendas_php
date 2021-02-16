@@ -17,6 +17,8 @@ comissao decimal(7,2) generated always as ((valor_venda/100)*8.5) stored,
 data_venda TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
 primary key(cod),
 foreign key(id_vendedor) references vendedores(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
 ) engine=InnoDB default charset=utf8;*/
 
 /*alter table vendas
@@ -30,14 +32,20 @@ modify data_venda date not null*/
 (3, 'Stefanie Mendes', 'stefanie25@gmail.com');*/
 
 /*insert into vendas (id_vendedor, valor_venda, data_venda) values
-(1, '750.00', now()),
-(2, '1000.00', now()),
-(3, '3000.00', now());*/
+(1, '750.00', "2021-02-14"),
+(2, '1000.00', "2021-02-14"),
+(3, '3000.00', "2021-02-14"),
+(1, '750.00', "2021-02-15"),
+(2, '1000.00', "2021-02-15"),
+(3, '3000.00', "2021-02-15");*/
 
 -- select * from vendedores
 
 -- select * from vendas
 
 /*select vendedores.id, vendedores.nome, vendedores.email, vendas.comissao, vendas.valor_venda, vendas.data_venda from vendas join vendedores
-where id_vendedor='3' and id='3';*/
+where id_vendedor='1' and id='1';*/
 
+/*delete from vendedores where id='7'*/
+
+select valor_venda from vendas where data_venda="2021-02-14"
