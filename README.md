@@ -1,6 +1,6 @@
 # Sistema CRUD de vendas
 ## Codificado em PHP e MySQL
-Sistema de cadastro de vendedores e vendas CRUD
+Sistema de cadastro de vendedores e vendas, que permite cadastrar, visualizar, editar e deletar dados. Também envia um email automático ao fim do dia com o total de vendas daquela data. 
 
 ## Telas do sistema:
 ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/tela-inicial-sistema.PNG)
@@ -19,7 +19,7 @@ Sistema de cadastro de vendedores e vendas CRUD
 - Cadastro de vendedores: Ao clicar no botão ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/bt-cadastrar-venda.PNG) no topo do sistema você será redirecionado para a tela de cadastro de venda, onde deverá inserir o ID do vendedor e o valor da venda. Ao clicar no botão cadastrar, o mesmo será salvo no DB, sendo a data e a comissão de 8,5% preenchidos automaticamente.
 
 ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/tela-alterar-vendedores.PNG)
-- Editar dados do vendedor: Ao clicar no ícone ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/icone-editar.PNG) na tabela de vendedores da tela principal você será redirecionado para a tela de Editar dados do vendedor, os dados serão preenchidos automaticamente de acordo com o vendedor escolhido, e poderá ser alterado nome e e-mail, sendo o id impossivel de alterar. Ao clicar no botão Alterar, o mesmo será salvo no DB e exibido na tela principal automaticamente.
+- Editar dados do vendedor: Ao clicar no ícone ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/icone-editar.PNG) na tabela de vendedores da tela principal você será redirecionado para a tela de Editar dados do vendedor, os dados serão preenchidos automaticamente de acordo com o vendedor escolhido, e poderá ser alterado nome e e-mail, sendo o ID impossível de alterar. Ao clicar no botão Alterar, o mesmo será salvo no DB e exibido na tela principal automaticamente.
 
 ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/tela-excluir-vendedores.PNG)
 - Excluir cadastro do vendedor: Ao clicar no ícone ![print_menu](https://github.com/Lz-Rod/crud_vendas_php/blob/main/docs/img/icone-excluir.PNG) na tabela de vendedores da tela principal você será redirecionado para a tela de Excluir cadastro do vendedor. Os dados serão exibidos automaticamente de acordo com o vendedor escolhido, e o sistema mostrará um aviso perguntando se realmente deseja excluir aquele cadastro, lembrando que suas respectivas vendas também serão excluídas do DB. Abaixo haverá dois botões Excluir e Cancelar, caso clique em excluir será redirecionado para uma tela confirmando a exclusão do cadastro e caso clique em  cancelar será redirecionado para a tela principal.
@@ -46,7 +46,7 @@ O sistema possuí a função de enviar um relatório com o valor de todas as ven
 Caso queira testar em um localhost serão necessárias configurações para o correto envio do email, nesse sistema usei o XAMMP com o envio pelo gmail e foram realizadas as seguintes configurações:
 
 ### php.ini:
-Edite o arquivo php.ini na pasta C:\Xampp\php. Dentro deste arquivo, encontre a seção [mail function], comente duas as linhas ativas logo abaixo dela com ; e cole depois as seguintes diretivas:
+Edite o arquivo php.ini na pasta C:\Xampp\php. Dentro deste arquivo, encontre a seção [mail function], substitua as seguintes diretivas:
 
 - SMTP=smtp.gmail.com
 - smtp_port=587
@@ -55,7 +55,7 @@ Edite o arquivo php.ini na pasta C:\Xampp\php. Dentro deste arquivo, encontre a 
 O X é a letra da partição onde está instalado o Xampp (Cou D, etc)
 
 ### sendmail.ini:
-Agora edite o arquivo sendmail.ini na pasta C:\Xampp\sendmail. Dentro deste arquivo, encontre a seção [sendmail], comente todas as linhas abaixo dela com um ; e depois no final do arquivo cole as linhas abaixo:
+Agora edite o arquivo sendmail.ini na pasta C:\Xampp\sendmail. Dentro deste arquivo, encontre a seção [sendmail], substitua as linhas abaixo:
 
 - smtp_server=smtp.gmail.com
 - smtp_port=587
