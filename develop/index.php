@@ -14,7 +14,7 @@
         require_once "functions.php";
         $ordem = $_GET['o'] ?? "i";
         $chave = $_GET['c'] ?? "";
-        env_email("destino@email", "remetente@email")//inserir destinatário e remetente para envio do relatório diário de vendas
+        env_email("destino@email", "remetente@email");//inserir destinatário e remetente para envio do relatório diário de vendas
     ?>
     <div id="container">
         <?php include_once "header.php"; ?>

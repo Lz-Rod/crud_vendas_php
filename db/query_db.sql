@@ -45,4 +45,4 @@ where id_vendedor='1' and id='1';*/
 
 /*delete from vendedores where id='7'*/
 
-select sum(valor_venda) from vendas where data_venda="2021-02-16"
+select sum(valor_venda) from vendas where data_venda="2021-02-16vendas"

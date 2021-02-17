@@ -10,20 +10,18 @@
         $res = array_sum($reg)/2;
 
 
-        if($hora >= '23:59:00') {
-            $headers = "MIME-Version: 1.1\r\n";
-            $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-            $headers .= "From: $remetente\r\n"; 
-            $headers .= "Return-Path: $remetente\r\n"; 
-            $texto = "O total em vendas do dia $data foi R$ $res.";
-            $envio = mail($destinatario, "Relatório diário $data", $texto, $headers);
+        if($hora >= '23:59:00') { 
+            $to_email = "$destinatario";
+            $subject = "Relatório diário $data";
+            $body = "O total em vendas do dia $data foi R$ $res.";
+            $headers = "From: $remetente";
             
-            if($envio) 
-            echo msg_sucesso("Relatório diário enviado com sucesso!");
-            else
-            echo msg_erro("O Relatório diário não pôde ser enviado.");
+            if (mail($to_email, $subject, $body, $headers)) {
+                echo msg_sucesso("Relatório diário enviado com sucesso!");
+            } else {
+                echo msg_erro("O Relatório diário não pôde ser enviado.");
+            }            
         } 
-
     }
 
     // ícone de voltar ao index
